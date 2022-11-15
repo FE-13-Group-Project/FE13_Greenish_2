@@ -7,6 +7,7 @@ import { Button, Card } from "react-bootstrap";
 function ListEvent() {
   const dispatch = useDispatch();
   const { event } = useSelector((state) => state);
+  console.log(event);
 
   useEffect(() => {
     dispatch(getData());
