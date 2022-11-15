@@ -11,3 +11,8 @@
         display: none;
     }
   }
+.card:hover{
+    box-shadow:  14px 14px 19px #676767,
+             -14px -14px 19px #ffffff;
+    transition: 0.5s ease-in-out;
+}
