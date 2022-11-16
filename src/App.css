@@ -11,6 +11,9 @@
         display: none;
     }
   }
+.card{
+    cursor: pointer;
+}
 .card:hover{
     box-shadow:  14px 14px 19px #676767,
              -14px -14px 19px #ffffff;
@@ -61,7 +64,12 @@
     }
 }
 
-
+.SHOW{
+    display:NONE
+}
+.HIDDEN{
+    display:block
+}
 
 
 

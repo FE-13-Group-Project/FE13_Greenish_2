@@ -3,22 +3,28 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../redux/action/Action";
 import { Button, Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 function ListEvent() {
   const dispatch = useDispatch();
+  const nav = useNavigate()
   const { event } = useSelector((state) => state);
-  console.log(event);
+  // console.log(event);
 
   useEffect(() => {
     dispatch(getData());
   }, []);
+
+  function handleDetail(id) {
+    nav(`/detail/${id}`)
+  }
   return (
     <div style={{ maxWidth: "100%" }}>
       <div
         className="banner"
         style={{
           width: "100%",
-          height: "600px",
+          height: "800px",
           backgroundImage: `url(https://images.unsplash.com/photo-1616680214084-22670de1bc82?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80)`,
           backgroundPosition: "center",
           backgroundSize: "cover",
@@ -31,7 +37,7 @@ function ListEvent() {
           style={{
             backgroundColor: "black",
             width: "100%",
-            height: "600px",
+            height: "800px",
             position: "absolute",
             opacity: "0.7",
           }}
@@ -41,7 +47,7 @@ function ListEvent() {
           style={{
             color: "white",
             position: "absolute",
-            bottom: "150px",
+            bottom: "180px",
             padding: "20px",
             maxWidth: "800px",
           }}
@@ -103,6 +109,7 @@ function ListEvent() {
           return (
             <Card
               className="card"
+              onClick={()=>handleDetail(item.id)}
               key={item.id}
               style={{
                 margin: "20px auto",
