@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import 'bootstrap/dist/css/bootstrap.min.css'
 // import 'bootstrap/dist/js/bootstrap.bundle.js'
 // import '../style/Navbar.css'
 
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 function Navbar() {
+   const nav = useNavigate()
+   const[hide,setHide] = useState()
+   const[login,setLogin] = useState()
+   useEffect(()=>{
+      if (localStorage.getItem('isLogin') === "false") {
+         setHide("SHOW")
+         setLogin("HIDDEN")
+      }else if (localStorage.getItem('isLogin') === "true"){
+         setHide("HIDDEN")
+         setLogin("SHOW")
+
+       }
+   })
+   function signOut() {
+      localStorage.removeItem("id_user")
+      localStorage.removeItem("role_user")
+      localStorage.setItem('isLogin',false)
+      nav("/")
+   }
    return (
       <div>
          <nav className="navbar navbar-expand-lg navbar-light ">
@@ -65,22 +84,22 @@ function Navbar() {
                            className="dropdown-menu"
                            aria-labelledby="navbarDropdownMenuLink"
                         >
-                           <li id="login">
+                           <li id="login" className={login}>
                               <Link to={"/login"} className="dropdown-item">
                                  Login / Register
                               </Link>
                            </li>
-                           <li id="dash">
+                           <li id="dash" className={hide}>
                               <a className="dropdown-item">Dashboard</a>
                            </li>
-                           <li id="edit">
+                           <li id="edit" className={hide}>
                               <a className="dropdown-item">Edit Profil</a>
                            </li>
-                           <li id="log">
+                           <li id="log"className={hide}>
                               <a
                                  className="dropdown-item"
                                  //  href="#"
-                                 //  onClick={signOut()}
+                                  onClick={()=>signOut()}
                               >
                                  Log Out
                               </a>
