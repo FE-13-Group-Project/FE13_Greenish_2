@@ -13,7 +13,7 @@ function HomePage() {
       dispatch(getData());
    }, []);
    return (
-      <div>
+      <div className="container-homepage">
          <div
             id="carouselExampleCaptions"
             className="carousel slide"
