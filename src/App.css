@@ -82,6 +82,14 @@
 .container {
     padding: 20px 0px;
 }
+.container-homepage {
+    background-color: #EFF7F2;
+}
 #load {
     margin-bottom: 10px;
+}
+
+/* Add event */
+.container-addevent {
+    background-color: #EFF7F2;
 }
