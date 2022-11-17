@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Alert } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { postEvent } from "../redux/action/Action";
-
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 function AddEvent() {
    const dispatch = useDispatch()
    const [name,setName] = useState("")
@@ -54,6 +55,7 @@ function AddEvent() {
    // }
    return (
       <div>
+         <Navbar />
          <div className="container-addevent">
             <div className="container ">
                <center>
@@ -206,6 +208,7 @@ function AddEvent() {
                </form>
             </div>
          </div>
+         <Footer />
       </div>
    );
 }
