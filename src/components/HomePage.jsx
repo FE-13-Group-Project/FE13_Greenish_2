@@ -10,7 +10,7 @@ function HomePage() {
    const dispatch = useDispatch();
    const nav = useNavigate();
    const { event } = useSelector((state) => state);
-   console.log("ini dari homepage", event);
+   // console.log("ini dari homepage", event);
 
    useEffect(() => {
       dispatch(getData());

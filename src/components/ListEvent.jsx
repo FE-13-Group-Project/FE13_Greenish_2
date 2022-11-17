@@ -129,10 +129,7 @@ function ListEvent() {
                            cursor: "pointer",
                         }}
                      >
-                        <Card.Header
-                           style={{ padding: 0, borderRadius: "30px 30px 0 0" }}
-                        >
-                           <Card.Img
+                         <Card.Img
                               variant="top"
                               height={200}
                               src={item.posterEvent}
@@ -141,7 +138,6 @@ function ListEvent() {
                                  borderRadius: "30px 30px 0 0",
                               }}
                            />
-                        </Card.Header>
                         <Card.Body
                            style={{
                               display: "flex",

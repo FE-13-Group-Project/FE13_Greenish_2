@@ -15,11 +15,25 @@ import Navbar from "./Navbar";
 
 function DetailEvent() {
    const { id } = useParams();
-   const { event } = useSelector((state) => state);
+   const { event,users } = useSelector((state) => state);
    const { pathname } = useLocation();
    const [hide, setHide] = useState();
-   console.log(hide);
+   const [fname, setFname] = useState();
+   const [lname, setLname] = useState();
+   const [email, setEmail] = useState();
 
+
+   useEffect(()=>{
+      if (localStorage.getItem("id_user")) {
+         users.map((item)=>{
+            if (item.id == localStorage.getItem("id_user")) {
+               setFname(item.firstName)
+               setLname(item.lastName)
+               setEmail(item.email)
+            }
+         })
+      }
+   },[])
    const dispatch = useDispatch();
    useEffect(() => {
       dispatch(getData());
@@ -112,19 +126,19 @@ function DetailEvent() {
                                  >
                                     {item.status}
                                  </p>
-                                 <h3
-                                    style={{
-                                       fontSize: "45px",
-                                       fontWeight: "600",
-                                    }}
+                                 <h3 className="title"
+                                    // style={{
+                                    //    fontSize: "45px",
+                                    //    fontWeight: "600",
+                                    // }}
                                  >
                                     {item.nameEvent}
                                  </h3>
-                                 <p
-                                    style={{
-                                       fontSize: "30px",
-                                       fontWeight: "500",
-                                    }}
+                                 <p className="org"
+                                    // style={{
+                                    //    fontSize: "30px",
+                                    //    fontWeight: "500",
+                                    // }}
                                  >
                                     {item.organizer}
                                  </p>
@@ -333,6 +347,8 @@ function DetailEvent() {
                                     <Form.Control
                                        type="text"
                                        placeholder="Your first name"
+                                       value={fname}
+                                       disabled
                                     />
                                  </Form.Group>
 
@@ -344,6 +360,8 @@ function DetailEvent() {
                                     <Form.Control
                                        type="text"
                                        placeholder="Your last name"
+                                       value={lname}
+                                       disabled
                                     />
                                  </Form.Group>
                               </Row>
@@ -364,6 +382,8 @@ function DetailEvent() {
                                  <Form.Control
                                     type="email"
                                     placeholder="Youremai@gmail.com"
+                                    value={email}
+                                       disabled
                                  />
                               </Form.Group>
 

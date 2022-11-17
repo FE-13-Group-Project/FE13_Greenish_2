@@ -28,10 +28,10 @@ function Navbar() {
    return (
       <div>
          <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <div className="container-fluid navbar">
+            <div className="container-fluid navbar" >
                <a className="navbar-brand" href="#">
                   <svg
-                     width="135"
+                     width="135" 
                      height="35"
                      viewBox="0 0 135 35"
                      fill="none"
@@ -76,7 +76,7 @@ function Navbar() {
                      <li className="nav-item navbar-style">
                         <Link
                            to={"/"}
-                           className="nav-link active link-list"
+                           className="nav-link link-list"
                            aria-current="page"
                         >
                            Home

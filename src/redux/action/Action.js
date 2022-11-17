@@ -4,6 +4,7 @@ export const FETCH_START = "FETCH_START";
 export const FETCH_DONE = "FETCH_DONE";
 export const GET_DATA = "GET_DATA";
 export const POST_EVENT = "POST_EVENT";
+export const POST_USER = "POST_USER";
 
 
 export function fetchStart() {
@@ -35,4 +36,11 @@ export function postEvent(data){
     return(async()=>{
         axios.post("https://634c991cf5d2cc648e90dc64.mockapi.io/gre/1/event",data)
     })
+}
+
+export function postUser(data) {
+    return(async()=>{
+        axios.post("https://634c991cf5d2cc648e90dc64.mockapi.io/gre/1/users",data)
+    })
+    
 }
