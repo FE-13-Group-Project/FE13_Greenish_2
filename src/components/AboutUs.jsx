@@ -1,8 +1,15 @@
 import React from 'react'
-
+import Navbar from './Navbar'
+import Footer from './Footer'
 function AboutUs() {
   return (
-    <div>AboutUs</div>
+    <div>
+      <Navbar />
+      <div>
+
+      </div>
+      <Footer />
+    </div>
   )
 }
 

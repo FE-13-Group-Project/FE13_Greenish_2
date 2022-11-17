@@ -12,9 +12,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
    <Provider store={store}>
    <LoginAuth>
       <BrowserRouter>
-         <Navbar />
          <App />
-         <Footer />
       </BrowserRouter>
    </LoginAuth>
       
