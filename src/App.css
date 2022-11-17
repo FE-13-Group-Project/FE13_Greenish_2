@@ -93,3 +93,49 @@
 .container-addevent {
     background-color: #EFF7F2;
 }
+
+
+
+
+/* style register */
+.row-register{
+    background-color: white;
+    border-radius: 25px;
+    margin: 2% 0%;
+}
+.image > img {
+    max-width: 100%;
+    height: 60vh;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    /* margin: 10px; */
+  }
+  #form {
+    padding-bottom: 2%;
+  }
+  #judul {
+    padding: 10px;
+  }
+  #content1 {
+    margin-top: 30px;
+  }
+  .ask {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .switch {
+    text-decoration: none;
+}
+  @media (max-width: 576px) {
+    img {
+      display: none;
+
+    }
+    .image > img {
+      max-width: 100%;
+      height: 40vh;
+      padding-bottom: 10px;
+      border-radius: 25px;
+    }
+    
+  }

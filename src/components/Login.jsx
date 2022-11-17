@@ -76,6 +76,7 @@ function Login() {
           <p className="forgot-password text-right mt-2">
             Forgot <a href="#">password?</a>
           </p>
+          <button onClick={()=>nav('/register')}>Register</button>
         </div>
       </form>
     </div>
