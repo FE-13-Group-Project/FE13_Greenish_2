@@ -1,10 +1,11 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import Navi from './Navi'
 function AboutUs() {
   return (
     <div>
-      <Navbar />
+      <Navi />
       <div>
 
       </div>
