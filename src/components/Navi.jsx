@@ -69,16 +69,18 @@ function Navi() {
               </Link>
             </Nav.Link>
             <NavDropdown style={{marginTop:'5px'}} title={img} id="collasible-nav-dropdown">
-              <NavDropdown.Item className={login}>
-                <Link to={"/login"} className="dropdown-item">
-                  Login / Register
-                </Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item className={hide}>
-                <Link className="dropdown-item">Edit Profile</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item className={hide} onClick={() => signOut()}>
-              <li id="log" className={hide}>
+            <li id="login" className={login}>
+                              <Link to={"/login"} className="dropdown-item">
+                                 Login / Register
+                              </Link>
+                           </li>
+                           <li id="dash" className={hide}>
+                              <a className="dropdown-item">Dashboard</a>
+                           </li>
+                           <li id="edit" className={hide}>
+                              <a className="dropdown-item">Edit Profil</a>
+                           </li>
+                           <li id="log" className={hide}>
                               <a
                                  className="dropdown-item"
                                  //  href="#"
@@ -87,7 +89,6 @@ function Navi() {
                                  Log Out
                               </a>
                            </li>
-              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
