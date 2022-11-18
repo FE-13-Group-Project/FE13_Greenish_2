@@ -36,6 +36,7 @@ function DetailEvent() {
       "phone": phone,
       "city": city,
       "zip": zip,
+      "eventID": id
       
     }
 
@@ -291,9 +292,9 @@ function DetailEvent() {
                                     <img
                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABg0lEQVRIid2VPU7DQBCFP9mKG0hriSsE34GABCUKEcoVIiwE4RIo4gxQ8XMLClpEQ4IgBLgAZaAgBTHFzsqL8e46lHnSaKOdmfd2xzMbWHREQAe4AkbAp9gIuBRf9F/yNvAGZB57BXbmIQ6AE4PgHjgAGsCS2CpwCAyMuL7keqHJv4CuJykA9iRWizjRNsjXSvz6tEU0DZGWjTwir3nXEmMTAEjF9wLUygI65DW3lcUlEAJD8e/qTZNId8IpMLOQuPANnMnv0jI9i3rDQeK6AajuylBz8gcTcdYrCMQWf138E71RqW8NPMh67RCxokqJYvIPOSwRSSiUyLzBnaybDoF3YEPIE+AGWDH8W7LeliXrNh3gL515k1T2QlQJf7WpiQj1cGWo8fchLsTtS+4Yy6CBmgX9VDQriGisA1PU/Gz7gvuGSIq6ug0h6uRTyTmucprAENHd0kMN0bJYAhyR13wm5HO1fQv1cPn+cMZUKIsNNVRHXABPwIfYI3AuPusHXQz8AE5Yfbda1m0KAAAAAElFTkSuQmCC"
                                        alt=""
-                                    />
+                                    /> : 
                                  </Col>
-                                 <Col lg={"auto"}>:</Col>
+                                 
                                  <Col
                                     style={{ paddingLeft: "10px" }}
                                     lg={"auto"}
@@ -309,9 +310,8 @@ function DetailEvent() {
                                     <img
                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABFklEQVRIie3Vvy5EQRQG8J9/FYrdyiNYBRIqhUQj4QlEq1BoNhHPQKL1CipeQFZ0ulXYSNQS7W4iCpVcxVzJZFh3710afMkU882c75s599w5/KMAI8l8EceoVdTr4QC3/QxaWMF9RYMGrrH+TownG2q5+HJFgzbqMTFaUWhg/LhBmiJYQjaE5k08+Z0pSnGBB+xgTEjfmVDrDWwNqINQZlk0djGRr73k3Amm87UpHCYx7ViwKEWzOEq4NVxiDzNFJy4yaGIy4eaEG2zgGavDGHyGc9zhEfPY/26DJ2wLD+MVNssEpx85y0/awmvEdXAq/FTp/vYH1QKDsuPLKuqVuW4fdONJ2g8WhIZTVw1doeF0Ksb/RbwBaUlLX3tWyicAAAAASUVORK5CYII="
                                        alt=""
-                                    />
+                                    /> : 
                                  </Col>
-                                 <Col lg={"auto"}>:</Col>
                                  <Col
                                     style={{ paddingLeft: "10px" }}
                                     lg={"auto"}
@@ -365,7 +365,8 @@ function DetailEvent() {
                                        margin: "auto",
                                     }}
                                  >
-                                    <h2>MAAF BELUM LOGIN</h2>
+                                    <h2 style={{textAlign:'center'}}>Ups! Sepertinya kamu belum login</h2>
+                                    <h4 style={{textAlign:'center'}}>Login atau register terlebih dahulu untuk bisa mendaftar event ini</h4>
                                  </div>
                               </div>
                               <Row className="mb-3">

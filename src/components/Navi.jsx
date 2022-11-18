@@ -10,6 +10,7 @@ function Navi() {
   const nav = useNavigate();
   const [hide, setHide] = useState();
   const [login, setLogin] = useState();
+  const [add, setAdd] = useState();
   useEffect(() => {
     if (localStorage.getItem("isLogin") === "false") {
       setHide("SHOW");
@@ -18,7 +19,15 @@ function Navi() {
       setHide("HIDDEN");
       setLogin("SHOW");
     }
-  });
+  },[localStorage.getItem("isLogin") === "false"]);
+
+  useEffect(()=>{
+    if (localStorage.getItem('role_user')!= "0") {
+       setAdd("SHOW")
+    }else if(localStorage.getItem('role_user')=== "0"){
+      setAdd("HIDDEN")
+    }
+ },[])
   function signOut() {
     localStorage.removeItem("id_user");
     localStorage.removeItem("role_user");
@@ -58,7 +67,7 @@ function Navi() {
                 Event
               </Link>
             </Nav.Link>
-            <Nav.Link>
+            <Nav.Link className={add}>
               <Link to={"/addevent"} style={{fontSize:'20px',fontWeight:'500'}} className="nav-link link-list">
                 Add Event
               </Link>
