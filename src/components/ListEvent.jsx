@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../redux/action/Action";
 import { Button, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import Navbar from "./Navbar";
+import Navi from "./Navi";
 import Footer from "./Footer";
 function ListEvent() {
    const dispatch = useDispatch();
@@ -21,7 +21,7 @@ function ListEvent() {
    }
    return (
       <div>
-        <Navbar />
+        <Navi/>
          <div style={{ maxWidth: "100%" }}>
             <div
                className="banner"
@@ -79,7 +79,7 @@ function ListEvent() {
                   >
                      <a
                         style={{ color: "white", textDecoration: "none" }}
-                        href="#"
+                        href="#jelajahi"
                      >
                         Jelajahi
                      </a>
@@ -98,6 +98,7 @@ function ListEvent() {
             </h2>
             <div
                className="wrapper"
+               id="jelajahi"
                style={{
                   maxWidth: "1200px",
                   margin: "auto",
@@ -124,7 +125,7 @@ function ListEvent() {
                            margin: "20px auto",
                            maxWidth: "20rem",
                            height: "28.5rem",
-                           backgroundColor: "wheat",
+                           backgroundColor: "#FDCB9E",
                            borderRadius: "30px",
                            cursor: "pointer",
                         }}
@@ -185,7 +186,7 @@ function ListEvent() {
                               </Card.Title>
                               <Card.Text
                                  style={{
-                                    textAlign: "justify",
+                                    textAlign: "left",
                                     fontSize: "18px",
                                     width: "100%",
                                     fontWeight: "300",

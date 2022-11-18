@@ -1,11 +1,12 @@
 import React from "react";
 import { useEffect } from "react";
-import { Card } from "react-bootstrap";
+import { Button, Card, Carousel } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { getData } from "../redux/action/Action";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Navi from "./Navi";
 function HomePage() {
    const dispatch = useDispatch();
    const nav = useNavigate();
@@ -21,96 +22,63 @@ function HomePage() {
    }
    return (
       <div>
-         <Navbar />
+         <Navi />
          <div className="container-homepage">
-            <div
-               id="carouselExampleCaptions"
-               className="carousel slide"
-               data-bs-ride="carousel"
-            >
-               <div className="carousel-indicators">
-                  <button
-                     type="button"
-                     data-bs-target="#carouselExampleCaptions"
-                     data-bs-slide-to="0"
-                     className="active"
-                     aria-current="true"
-                     aria-label="Slide 1"
-                  ></button>
-                  <button
-                     type="button"
-                     data-bs-target="#carouselExampleCaptions"
-                     data-bs-slide-to="1"
-                     aria-label="Slide 2"
-                  ></button>
-                  <button
-                     type="button"
-                     data-bs-target="#carouselExampleCaptions"
-                     data-bs-slide-to="2"
-                     aria-label="Slide 3"
-                  ></button>
-               </div>
-               <div className="carousel-inner">
-                  <div className="carousel-item active">
-                     <img
-                        src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
-                        className="d-block w-100"
-                        alt="..."
-                     />
-                     <div className="carousel-caption d-none d-md-block">
-                        <h5>Mari bergabung bersama Greenish</h5>
-                        <p>Sayangi lingkungan kita yang indah ini</p>
-                     </div>
-                  </div>
-                  <div className="carousel-item">
-                     <img
-                        src="https://images.unsplash.com/photo-1523810192022-5a0fb9aa7ff8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80"
-                        className="d-block w-100"
-                        alt="..."
-                     />
-                     <div className="carousel-caption d-none d-md-block">
-                        <h5>Mari bergabung bersama Greenish</h5>
-                        <p>Menanam pohon untuk kelestarian alam</p>
-                     </div>
-                  </div>
-                  <div className="carousel-item">
-                     <img
-                        src="https://images.unsplash.com/photo-1610093674388-cee0337f2684?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                        className="d-block w-100"
-                        alt="..."
-                     />
-                     <div className="carousel-caption d-none d-md-block">
-                        <h5>Mari bergabung bersama kami</h5>
-                        <p>Membuang sampah pada tempatnya</p>
-                     </div>
-                  </div>
-               </div>
-               <button
-                  className="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide="prev"
-               >
-                  <span
-                     className="carousel-control-prev-icon"
-                     aria-hidden="true"
-                  ></span>
-                  <span className="visually-hidden">Previous</span>
-               </button>
-               <button
-                  className="carousel-control-next"
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide="next"
-               >
-                  <span
-                     className="carousel-control-next-icon"
-                     aria-hidden="true"
-                  ></span>
-                  <span className="visually-hidden">Next</span>
-               </button>
-            </div>
+           <div className="carro" style={{maxWidth:'100%',height:'39rem'}}>
+           <Carousel fade >
+      <Carousel.Item style={{height:'39rem',position:'relative',objectFit:'cover'}}>
+         <div style={{backgroundColor:'black',position:'absolute',height:"100%",width:'100%',opacity:'0.5'}}>
 
+         </div>
+        <img
+        style={{height:'39rem',maxWidth:'100%'}}
+          className="d-block w-100"
+          src="https://images.unsplash.com/photo-1581922814484-0b48460b7010?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+          alt="First slide"
+        />
+        <Carousel.Caption style={{position:'absolute',top:0,right:0,bottom:"-80px",margin:'auto',left:0,height:'fit-content',maxWidth:'60%',textAlign:'left'}}>
+          <h1 className="texted" style={{fontSize:'40px',textAlign:'left',fontWeight:'700'}}>Mari Berkontribusi bersama Greenish</h1>
+          <p className="texted2" style={{fontSize:'20px',textAlign:'left',fontWeight:'400'}}>donasi kamu sangat berarti untuk mendukung setiap kampanye yang kami lakukan..</p>
+            <Button style={{textAlign:'left'}}>Explore</Button>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item style={{height:'39rem',position:'relative',objectFit:'cover'}}>
+         <div style={{backgroundColor:'black',position:'absolute',height:"100%",width:'100%',opacity:'0.5'}}>
+
+         </div>
+        <img
+        style={{height:'39rem',maxWidth:'100%'}}
+          className="d-block w-100"
+          src="https://images.unsplash.com/photo-1591543620767-582b2e76369e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=587&q=80"
+          alt="Second slide"
+        />
+        <Carousel.Caption style={{position:'absolute',top:0,right:0,bottom:"-80px",margin:'auto',left:0,height:'fit-content',maxWidth:'60%',textAlign:'left'}}>
+          <h1 className="texted" style={{fontSize:'40px',textAlign:'left',fontWeight:'700'}}>Mari Berkontribusi bersama Greenish</h1>
+          <p className="texted2" style={{fontSize:'20px',textAlign:'left',fontWeight:'400'}}>donasi kamu sangat berarti untuk mendukung setiap kampanye yang kami lakukan..</p>
+            <Button style={{textAlign:'left'}}>Explore</Button>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item style={{height:'39rem',position:'relative',objectFit:'cover'}}>
+         <div style={{backgroundColor:'black',position:'absolute',height:"100%",width:'100%',opacity:'0.5'}}>
+
+         </div>
+        <img
+        style={{height:'39rem',maxWidth:'100%'}}
+          className="d-block w-100"
+          src="https://images.unsplash.com/photo-1501168624770-d67200f0ccb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+          alt="Second slide"
+        />
+        <Carousel.Caption style={{position:'absolute',top:0,right:0,bottom:"-80px",margin:'auto',left:0,height:'fit-content',maxWidth:'60%',textAlign:'left'}}>
+          <h1 className="texted" style={{fontSize:'40px',textAlign:'left',fontWeight:'700'}}>Mari Berkontribusi bersama Greenish</h1>
+          <p className="texted2" style={{fontSize:'20px',textAlign:'left',fontWeight:'400'}}>donasi kamu sangat berarti untuk mendukung setiap kampanye yang kami lakukan..</p>
+            <Button style={{textAlign:'left'}}>Explore</Button>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+           </div>
+           <section>
+               
+           </section>
             <div className="container">
                <h1 className="judul">Event</h1>
                <div className="content-event">

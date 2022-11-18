@@ -9,9 +9,10 @@ import {
 } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useParams } from "react-router-dom";
-import { getData } from "../redux/action/Action";
+import { getData, regisEvent } from "../redux/action/Action";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+import Navi from "./Navi";
 
 function DetailEvent() {
    const { id } = useParams();
@@ -21,6 +22,22 @@ function DetailEvent() {
    const [fname, setFname] = useState();
    const [lname, setLname] = useState();
    const [email, setEmail] = useState();
+   const [address, setAdress] = useState();
+   const [phone, setPhone] = useState();
+   const [city, setCity] = useState();
+   const [zip, setZip] = useState();
+   // console.log(regis);
+
+   const data ={
+      "fname": fname,
+      "lname": lname,
+      "email": email,
+      "address": address,
+      "phone": phone,
+      "city": city,
+      "zip": zip,
+      
+    }
 
 
    useEffect(()=>{
@@ -33,7 +50,7 @@ function DetailEvent() {
             }
          })
       }
-   },[])
+   },[users])
    const dispatch = useDispatch();
    useEffect(() => {
       dispatch(getData());
@@ -52,10 +69,19 @@ function DetailEvent() {
          setHide("SHOW");
       }
    }, []);
+   function handleRegisevent(e) {
+      e.preventDefault()
+      dispatch(regisEvent(data,id))
+      alert("berhasil daftar event, tunggu informasi dari pihak organizer")
+      setAdress("")
+      setPhone("")
+      setCity("")
+      setZip("")
+   }
 
    return (
       <div>
-         <Navbar />
+         <Navi />
          <div style={{ maxWidth: "100%", backgroundColor: "beige" }}>
             {event.map((item) => {
                if (item.id == id) {
@@ -311,7 +337,8 @@ function DetailEvent() {
                            Ayo daftarkan dirimu sekarang
                         </h2>
                         <Container style={{ padding: "20px" }}>
-                           <Form style={{ position: "relative" }}>
+                           
+                           <Form onSubmit={handleRegisevent} style={{ position: "relative" }}>
                               <div
                                  className={hide}
                                  style={{
@@ -371,7 +398,7 @@ function DetailEvent() {
                                  controlId="formGridAddress1"
                               >
                                  <Form.Label>Address</Form.Label>
-                                 <Form.Control placeholder="Jl. Mangga no 4" />
+                                 <Form.Control placeholder="Jl. Mangga no 4" value={address} onChange={(e)=>setAdress(e.target.value)}/>
                               </Form.Group>
 
                               <Form.Group
@@ -395,18 +422,19 @@ function DetailEvent() {
                                  <Form.Control
                                     type="number"
                                     placeholder="085..."
+                                    value={phone} onChange={(e)=>setPhone(e.target.value)}
                                  />
                               </Form.Group>
 
                               <Row className="mb-3">
                                  <Form.Group as={Col} controlId="formGridCity">
                                     <Form.Label>City</Form.Label>
-                                    <Form.Control />
+                                    <Form.Control value={city} onChange={(e)=>setCity(e.target.value)}/>
                                  </Form.Group>
 
                                  <Form.Group as={Col} controlId="formGridZip">
                                     <Form.Label>Zip</Form.Label>
-                                    <Form.Control />
+                                    <Form.Control value={zip} onChange={(e)=>setZip(e.target.value)} />
                                  </Form.Group>
                               </Row>
 

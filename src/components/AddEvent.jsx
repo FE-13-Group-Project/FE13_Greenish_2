@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { postEvent } from "../redux/action/Action";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Navi from "./Navi";
 function AddEvent() {
    const dispatch = useDispatch()
    const [name,setName] = useState("")
@@ -55,7 +56,7 @@ function AddEvent() {
    // }
    return (
       <div>
-         <Navbar />
+         <Navi />
          <div className="container-addevent">
             <div className="container ">
                <center>
