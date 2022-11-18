@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Alert } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { postEvent } from "../redux/action/Action";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Navi from "./Navi";
+import { useNavigate } from "react-router-dom";
+
 function AddEvent() {
+   const nav = useNavigate()
    const dispatch = useDispatch()
    const [name,setName] = useState("")
    const [poster,setPoster] = useState("")
@@ -54,6 +57,12 @@ function AddEvent() {
    // function testing(dt) {
    //    // dispatch(postEvent(dt))
    // }
+
+   useEffect(()=>{
+      if (localStorage.getItem('role_user')!= 0) {
+         nav('/')
+      }
+   },[])
    return (
       <div>
          <Navi />
