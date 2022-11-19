@@ -233,3 +233,7 @@ body {
    background-color: black;
    word-wrap: break-word;
 }
+
+.judul-artikel {
+   margin: 40px 0px;
+}

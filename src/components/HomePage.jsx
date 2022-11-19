@@ -8,11 +8,12 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Navi from "./Navi";
 import News from "./News";
+import Article from "./Article";
 function HomePage() {
    const dispatch = useDispatch();
    const nav = useNavigate();
    const { event } = useSelector((state) => state);
-   // console.log("ini dari homepage", event);
+   console.log("ini dari homepage", event);
 
    useEffect(() => {
       dispatch(getData());
@@ -81,6 +82,7 @@ function HomePage() {
                
            </section>
             <div className="container">
+               <Article />
                <h1 className="judul">Event</h1>
                <div className="content-event">
                   {event.slice(0, 3).map((item) => {
