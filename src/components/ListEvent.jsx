@@ -20,7 +20,7 @@ function ListEvent() {
       nav(`/detail/${id}`);
    }
    return (
-      <div>
+      <div className="listevent-background">
         <Navi/>
          <div style={{ maxWidth: "100%" }}>
             <div

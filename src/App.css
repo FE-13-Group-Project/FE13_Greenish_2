@@ -19,6 +19,9 @@ body {
    box-shadow: 14px 14px 19px #676767, -14px -14px 19px #ffffff;
    transition: 0.5s ease-in-out;
 }
+.listevent-background {
+   background-color: #eff7f2;
+}
 
 /* style Navbar */
 
@@ -78,6 +81,10 @@ body {
 }
 
 /* style register */
+.register-background {
+   background-color: #eff7f2;
+}
+
 .row-register {
    background-color: white;
    border-radius: 25px;
@@ -133,87 +140,96 @@ body {
 
 /* style about us */
 .content-aboutus {
-  text-align: center;
-  margin-bottom: 30px;
-  background-color: white;
-  border-radius: 10px;
+   text-align: center;
+   margin-bottom: 30px;
+   background-color: white;
+   border-radius: 10px;
+}
+
+.login-background {
+   background-color: #eff7f2;
 }
 
 .group-card-aboutus {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-around;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
 }
 
 .picture-aboutus > img {
-  width: 165px;
-  height: 165px;
-  margin: 10px 10px;
+   width: 165px;
+   height: 165px;
+   margin: 10px 10px;
 }
 
 .content-aboutus > p {
-  padding-bottom: 10px;
+   padding-bottom: 10px;
 }
 
 .teks-1 {
-  font-size:18px ;
+   font-size: 18px;
 }
 .container-aboutus {
-  margin-top: 10px;
-  padding: 20px
+   margin-top: 10px;
+   padding: 20px;
+
 }
 
-.boxtext{
-  margin-top: 250px;
-  text-align: center;
-  /* position: absolute; */
-  color: white;
-  /* bottom: 90px;
+.aboutus-background {
+   background-color: #eff7f2;
+}
+
+.boxtext {
+   margin-top: 250px;
+   text-align: center;
+   /* position: absolute; */
+   color: white;
+   /* bottom: 90px;
   left: 100px; */
-  max-width: 800px;
+   max-width: 800px;
 }
-.boxtext-aboutus h2{
-  font-size: 24px;
-  font-weight: 600;
+.boxtext-aboutus h2 {
+   font-size: 24px;
+   font-weight: 600;
 }
-.boxtext-aboutus p{
-  margin-bottom: 40px;
-  font-size: 18px;
-  font-weight: 400;
+.boxtext-aboutus p {
+   margin-bottom: 40px;
+   font-size: 18px;
+   font-weight: 400;
 }
 .boxtext-aboutus a {
-  font-size: 18px;
-  font-weight: 400;
-  border-radius: 10px;
-  background-color: #70c174;
-  color: white;
-  border: none;
-  text-decoration: none;
-  padding: 10px 20px;
+   font-size: 18px;
+   font-weight: 400;
+   border-radius: 10px;
+   background-color: #70c174;
+   color: white;
+   border: none;
+   text-decoration: none;
+   padding: 10px 20px;
 }
 .boxtext-aboutus a:hover {
-  background-color: white;
-  color: black;
+   background-color: white;
+   color: black;
 }
 
 .overlay-image-aboutus {
-  max-width: 100%;
-  background-image: url("https://images.unsplash.com/photo-1527489377706-5bf97e608852?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1259&q=80");
-  position: absolute;
-  height: 40rem;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-position: center;
-  background-size: cover;
-  opacity: 0.3;
+   max-width: 100%;
+   background-image: url("https://images.unsplash.com/photo-1527489377706-5bf97e608852?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1259&q=80");
+   position: absolute;
+   height: 40rem;
+   bottom: 0;
+   top: 0;
+   left: 0;
+   right: 0;
+   background-position: center;
+   background-size: cover;
+   opacity: 0.3;
 }
-.banner{
-  overflow: hidden;
-  max-width: 100%;
-  position: relative;
-  height: 35rem;
-  background-color: black;
-  word-wrap: break-word;
+.banner {
+   overflow: hidden;
+   max-width: 100%;
+   position: relative;
+   height: 35rem;
+   background-color: black;
+   word-wrap: break-word;
 }

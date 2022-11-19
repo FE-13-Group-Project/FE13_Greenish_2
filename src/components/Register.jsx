@@ -26,7 +26,7 @@ function Register() {
   }
 
   return (
-    <div>
+    <div className='register-background'>
        <div className="container">
         <div className="row row-register">
             <center><h1 id="judul">REGISTER</h1> </center>
