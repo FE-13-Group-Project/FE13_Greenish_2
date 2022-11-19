@@ -4,9 +4,9 @@ import Footer from './Footer'
 import Navi from './Navi'
 function AboutUs() {
   return (
-    <div>
+    <div className='aboutus-background'>
       <Navi />
-      <div>
+      <div className='aboutus-background'>
         <div className="container-fluid banner">
           <div className="container-fluid overlay-image overlay-image-aboutus"></div>
           <div className="container-fluid boxtext-aboutus">

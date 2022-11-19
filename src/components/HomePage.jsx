@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Navi from "./Navi";
+import News from "./News";
 function HomePage() {
    const dispatch = useDispatch();
    const nav = useNavigate();
@@ -122,6 +123,7 @@ function HomePage() {
                </button>
             </center>
          </div>
+         <News />
          <Footer />
       </div>
    );
