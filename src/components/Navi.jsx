@@ -67,11 +67,13 @@ function Navi() {
                 Event
               </Link>
             </Nav.Link>
-            <Nav.Link className={add}>
-              <Link to={"/addevent"} style={{fontSize:'20px',fontWeight:'500'}} className="nav-link link-list">
+            <li className={add}>
+              <Nav.Link className={add} >
+              <Link  to={"/addevent"} style={{fontSize:'20px',fontWeight:'500'}} className="nav-link link-list">
                 Add Event
               </Link>
             </Nav.Link>
+            </li>
             <Nav.Link>
               <Link to={"/aboutus"} style={{fontSize:'20px',fontWeight:'500'}} className="nav-link link-list">
                 About Us

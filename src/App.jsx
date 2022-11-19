@@ -9,6 +9,7 @@ import AboutUs from "./components/AboutUs";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import DetailEvent from "./components/DetailEvent";
+import NotFound from './components/NotFound';
 
 function App() {
    return (
@@ -16,11 +17,12 @@ function App() {
          <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/event" element={<ListEvent />} />
-            <Route path="/detail/:id" element={<DetailEvent />}/>
-            <Route path="/addevent" element={<AddEvent />} />
+            <Route exact path="/detail/:id" element={<DetailEvent />}/>
+            <Route exact path="/addevent" element={<AddEvent />} />
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="*" element={<NotFound />} />
          </Routes>
       </div>
    );
