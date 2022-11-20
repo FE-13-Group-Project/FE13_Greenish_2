@@ -40,7 +40,7 @@ function HomePage() {
         />
         <Carousel.Caption style={{position:'absolute',top:0,right:0,bottom:"-80px",margin:'auto',left:0,height:'fit-content',maxWidth:'60%',textAlign:'left'}}>
           <h1 className="texted" style={{fontSize:'40px',textAlign:'left',fontWeight:'700'}}>Mari Berkontribusi bersama Greenish</h1>
-          <p className="texted2" style={{fontSize:'20px',textAlign:'left',fontWeight:'400'}}>donasi kamu sangat berarti untuk mendukung setiap kampanye yang kami lakukan..</p>
+          <p className="texted2" style={{fontSize:'20px',textAlign:'left',fontWeight:'400'}}>gerakan kamu sangat berarti untuk mendukung setiap kampanye yang kami lakukan..</p>
             <Button style={{textAlign:'left'}}>Explore</Button>
         </Carousel.Caption>
       </Carousel.Item>
@@ -56,7 +56,7 @@ function HomePage() {
         />
         <Carousel.Caption style={{position:'absolute',top:0,right:0,bottom:"-80px",margin:'auto',left:0,height:'fit-content',maxWidth:'60%',textAlign:'left'}}>
           <h1 className="texted" style={{fontSize:'40px',textAlign:'left',fontWeight:'700'}}>Mari Berkontribusi bersama Greenish</h1>
-          <p className="texted2" style={{fontSize:'20px',textAlign:'left',fontWeight:'400'}}>donasi kamu sangat berarti untuk mendukung setiap kampanye yang kami lakukan..</p>
+          <p className="texted2" style={{fontSize:'20px',textAlign:'left',fontWeight:'400'}}>Bersama kita lindungi bumi kita untuk masa depan</p>
             <Button style={{textAlign:'left'}}>Explore</Button>
         </Carousel.Caption>
       </Carousel.Item>
@@ -72,7 +72,7 @@ function HomePage() {
         />
         <Carousel.Caption style={{position:'absolute',top:0,right:0,bottom:"-80px",margin:'auto',left:0,height:'fit-content',maxWidth:'60%',textAlign:'left'}}>
           <h1 className="texted" style={{fontSize:'40px',textAlign:'left',fontWeight:'700'}}>Mari Berkontribusi bersama Greenish</h1>
-          <p className="texted2" style={{fontSize:'20px',textAlign:'left',fontWeight:'400'}}>donasi kamu sangat berarti untuk mendukung setiap kampanye yang kami lakukan..</p>
+          <p className="texted2" style={{fontSize:'20px',textAlign:'left',fontWeight:'400'}}>tunjukkan bahwa kita bersama kita bisa mewujudkan bumi yang sehat..</p>
             <Button style={{textAlign:'left'}}>Explore</Button>
         </Carousel.Caption>
       </Carousel.Item>
