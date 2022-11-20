@@ -1,1 +1,3 @@
-# FE13_Greenish_2
+# Untuk Admin
+## Email : admin@gmail.com
+## Password : admin123
