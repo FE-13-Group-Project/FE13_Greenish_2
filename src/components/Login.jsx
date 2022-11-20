@@ -36,7 +36,7 @@ function Login() {
    }
 
    return (
-      <div className="login-background">
+      <div className="login-background" style={{height:'100vh'}}>
          <div className="container">
             <div className="row row-register">
                <center>
